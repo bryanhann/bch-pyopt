@@ -1,4 +1,7 @@
-# Insure at least one test will past.
+#!/usr/bin/env python3
+
+import example
+
 def test_dummy():
     """Give pytest something to test.
 
