@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 
-echo STUB [$0] "$@"
-
+${BCH_PYOPT__root}/.venv/bin/bch-pyopt "$@"
