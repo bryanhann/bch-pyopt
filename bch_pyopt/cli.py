@@ -1,21 +1,17 @@
-import click
+#!/usr/bin/env python3
 
+import sys
+sys.argv.append('')
+while sys.argv[1].startswith('_'):
+    opt = sys.argv.pop(1)[1:]
+    if opt == 'docparse':
+        import bch_pyopt.quick.docparse
+    if opt == 'cli':
+        def cli(): pass
+try:
+    cli
+except NameError:
+    from bch_pyopt.original.cli import cli
 
-@click.group()
-@click.version_option()
-def cli():
-    "Parse command line options via docstrings."
-
-
-@cli.command(name="command")
-@click.argument(
-    "example"
-)
-@click.option(
-    "-o",
-    "--option",
-    help="An example option",
-)
-def first_command(example, option):
-    "Command description goes here"
-    click.echo("Here is some output")
+sys.argv.pop(-1)
+cli()
