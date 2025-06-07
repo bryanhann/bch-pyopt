@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "### STUB: sourcing ${BASH_SOURCE[0]}"
+
