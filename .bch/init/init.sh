@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+source $(dirname $BASH_SOURCE)/fn.sh
+
 for pth in $(ls $(dirname ${BASH_SOURCE[0]})/[0-9]*); do
-    bch:000:debug . ${pth}
-    source ${pth}
+    ::dbg:: ". $(basename $pth)"
+    source $pth
 done
 
