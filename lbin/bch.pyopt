@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+$BH1
+root=$(dirname $(dirname  $(0resolve ${BASH_SOURCE[0]})))
+$root/app/.venv/bin/bch-pyopt "$@"

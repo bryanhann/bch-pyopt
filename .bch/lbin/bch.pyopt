@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-${BCH_PYOPT__root}/.venv/bin/bch-pyopt "$@"
